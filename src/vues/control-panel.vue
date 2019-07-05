@@ -16,6 +16,7 @@
         components: {MathMemoryGameCard},
         data() {
             return {
+                click: 0,
                 classNameList: [
                     {id: 1, classNameCard: "bg-basic", newColor: "bg-gradient-1",  pair: false},
                     {id: 2, classNameCard: "bg-basic", newColor: "bg-gradient-1",  pair: false},
@@ -88,6 +89,12 @@
             clicked: function (card) {
                 this.classNameList[card[0]].classNameCard = this.classNameList[card[0]].newColor;
                 this.classNameList[card[0]].back = false;
+
+                if(this.classNameList[card[0]].classNameCard !== "bg-basic"){
+                    this.click ++;
+                    console.log(this.click);
+                }
+
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <button class="d-inline-flex border text-center text-white card-size-8 ml-auto mr-auto p-0" :class="content.classNameCard" @click="rotate()"><span><span v-if="!content.ifOpen">math memory game</span>&nbsp;</span></button>
+    <button class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0" :class="content.classNameCard" @click="rotate()"><span><span v-if="!content.ifOpen">math memory game</span>&nbsp;</span></button>
 </template>
 
 <script>
@@ -26,9 +26,6 @@
 </script>
 
 <style lang="scss" scoped>
-    button:focus {
-        outline: none;
-    }
     button[class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0 bg-basic bg-basic"]:hover{
             $shadow: 0 0 35px 10px darkblue inset;
             box-shadow: $shadow;

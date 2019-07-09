@@ -203,14 +203,6 @@ $font-size: 14px;
                                                     line-height: $card-size - $minus;
                                                     font-size: $font-size - 9;
                                                   }
-                                                  .card-size-8 {
-                                                    $minus: 93px;
-                                                    $card-size: $card-size*1.25;
-                                                    width: $card-size - $minus;
-                                                    height: $card-size - $minus;
-                                                    line-height: $card-size - $minus;
-                                                    font-size: $font-size - 9;
-                                                  }
                                                 }
                                               }
                                             }

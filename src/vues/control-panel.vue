@@ -1,10 +1,10 @@
 <template>
-    <div class="container p-0 bg-basic pb-1 pt-1">
+    <div class="container p-0">
         <div class="row row-fluid p-0 m-0">
             <div class="col-12 text-center p-0 m-0">
                 <setting-display @setPairNumber="setField($event)"></setting-display>
             </div>
-            <div class="col-12 text-center p-0 m-0">
+            <div class="col-12 text-center p-0 m-0 bg-basic pb-1 pt-1">
                 <math-memory-game-card v-for="(groupListIndex, index) in classNameList" :key="index"
                                        :content="groupListIndex" @ifClicked="clicked($event)" :class="classNameList[index].classNameCard" v-if="classNameList[index].ifVisible"></math-memory-game-card>
             </div>

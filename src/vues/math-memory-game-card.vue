@@ -1,5 +1,5 @@
 <template>
-    <button class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0" :class="content.classNameCard" @click="rotate()"><span><span v-if="ifBack === true">math memory game</span>&nbsp;</span></button>
+    <button class="d-inline-flex border text-center text-white card-size-8 ml-auto mr-auto p-0" :class="content.classNameCard" @click="rotate()"><span><span v-if="!content.ifOpen">math memory game</span>&nbsp;</span></button>
 </template>
 
 <script>
@@ -10,23 +10,16 @@
                 type: Object
             }
         },
-        data() {
-          return {
-              ifBack: true
-          }
-        },
         methods: {
             rotate: function () {
-
                 if(this.content.classNameCard === "bg-basic"){
-                    console.log(this.classNameCardLocal);
-                    this.classNameCardLocal = this.content.newColor;
+                    this.$emit('ifClicked', [this.content.id-1]);
                     this.ifBack = false;
                 }
-                // else {
-                //     if(!this.content.pair) this.classNameCardLocal = "bg-basic"
-                // }
-                this.$emit('ifClicked', [this.content.id-1]);
+                else {
+                    window.alert("Die Karte ist schon geöffnet");
+                    this.ifBack = true;
+                }
             }
         }
     }

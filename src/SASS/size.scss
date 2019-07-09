@@ -65,7 +65,7 @@ $font-size: 14px;
                   width: $card-size - $minus;
                   height: $card-size - $minus;
                   line-height: $card-size - $minus;
-                  font-size: $font-size - 7;
+                  font-size: $font-size - 7.5;
                 }
                 @media screen and (max-width: 528px) {
                   .card-size {
@@ -73,7 +73,7 @@ $font-size: 14px;
                     width: $card-size - $minus;
                     height: $card-size - $minus;
                     line-height: $card-size - $minus;
-                    font-size: $font-size - 7;
+                    font-size: $font-size - 7.5;
                   }
                   @media screen and (max-width: 520px) {
                     .card-size {
@@ -105,7 +105,7 @@ $font-size: 14px;
                             width: $card-size - $minus;
                             height: $card-size - $minus;
                             line-height: $card-size - $minus;
-                            font-size: $font-size - 7.5;
+                            font-size: $font-size - 8;
                           }
                           @media screen and (max-width: 488px) {
                             .card-size {
@@ -113,7 +113,7 @@ $font-size: 14px;
                               width: $card-size - $minus;
                               height: $card-size - $minus;
                               line-height: $card-size - $minus;
-                              font-size: $font-size - 7.5;
+                              font-size: $font-size - 8;
                             }
                             @media screen and (max-width: 480px) {
                               .card-size {
@@ -137,7 +137,7 @@ $font-size: 14px;
                                     width: $card-size - $minus;
                                     height: $card-size - $minus;
                                     line-height: $card-size - $minus;
-                                    font-size: $font-size - 8;
+                                    font-size: $font-size - 9;
                                   }
                                   @media screen and (max-width: 456px) {
                                     .card-size {
@@ -145,7 +145,7 @@ $font-size: 14px;
                                       width: $card-size - $minus;
                                       height: $card-size - $minus;
                                       line-height: $card-size - $minus;
-                                      font-size: $font-size - 8;
+                                      font-size: $font-size - 8.6;
                                     }
                                     @media screen and (max-width: 448px) {
                                       .card-size {
@@ -198,6 +198,14 @@ $font-size: 14px;
                                                 @media screen and (max-width: 400px) {
                                                   .card-size {
                                                     $minus: 93px;
+                                                    width: $card-size - $minus;
+                                                    height: $card-size - $minus;
+                                                    line-height: $card-size - $minus;
+                                                    font-size: $font-size - 9;
+                                                  }
+                                                  .card-size-8 {
+                                                    $minus: 93px;
+                                                    $card-size: $card-size*1.25;
                                                     width: $card-size - $minus;
                                                     height: $card-size - $minus;
                                                     line-height: $card-size - $minus;

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './vues/control-panel.vue'
+import App from './vues/math-memory-game-field.vue'
 
 Vue.config.productionTip = false;
 

@@ -1,31 +1,31 @@
 <template>
-    <div class="container p-0">
+    <div class="container p-0 text-center pl-0 pr-0">
+        <div class="w-100 text-center bg-basic text-white" id="info">{{alert}}</div>
         <math-memory-game-setting @setPairNumber="setField($event)" v-if="settingVisibility"></math-memory-game-setting>
-        <div class="row row-fluid p-0 m-0">
-            <div class="col-12 text-center pt-1 pb-1 pl-0 pr-0 m-0 bg-basic">
-                <math-memory-game-card v-for="(groupListIndex, index) in classNameList" :key="index"
-                                       :content="groupListIndex" @ifClicked="clicked($event)"
-                                       :class="classNameList[index].classNameCard"
+        <math-memory-game-feedback :click="click" :pairNumber="pairNumber" :pairNumberFound="pairNumberFound" v-if="feedbackVisibility"></math-memory-game-feedback>
+        <math-memory-game-card :class="classNameList[index].classNameCard" :content="groupListIndex"
+                                       :key="index" @ifClicked="clicked($event)"
+                                       v-for="(groupListIndex, index) in classNameList"
                                        v-if="classNameList[index].ifVisible"></math-memory-game-card>
-
-            </div>
-        </div>
     </div>
 </template>
 
 <script>
     import MathMemoryGameCard from "./math-memory-game-card";
     import MathMemoryGameSetting from "./math-memory-game-setting";
+    import MathMemoryGameFeedback from "./math-memory-game-feedback";
 
     export default {
-        name: 'math-memory-game-field',
-        components: {MathMemoryGameSetting, MathMemoryGameCard},
+        name: 'math-memory-game-mainfield',
+        components: {MathMemoryGameFeedback, MathMemoryGameSetting, MathMemoryGameCard},
         data() {
             return {
                 click: 0,
                 pairNumber: 0,
                 pairNumberFound: 0,
                 settingVisibility: true,
+                alert: "",
+                feedbackVisibility: false,
                 classNameList: [
                     {
                         id: 1,
@@ -547,6 +547,9 @@
                 this.click = 0;
                 this.pairNumber = 0;
                 this.pairNumberFound = 0;
+                this.alert = "";
+                this.settingVisibility = true;
+                this.feedbackVisibility = false;
                 for (let i = 0; i < 64; i++) {
                     this.classNameList[i].classNameCard = "bg-basic";
                     this.classNameList[i].ifVisible = false;
@@ -564,6 +567,7 @@
 
             },
             setField: function (number) {
+                this.setReset();
                 if(number[0]!==0){
                     for (let i = 0; i < 64; i++) {
                         this.setReset();
@@ -571,8 +575,12 @@
                     for (let i = 0; i < number[0] * 2; i++) {
                         this.classNameList[i].ifVisible = true;
                     }
-                    this.pairNumber = number;
+                    this.pairNumber = number[0];
+                    this.feedbackVisibility = true;
                     this.settingVisibility = false;
+                }
+                else {
+                    this.alert = "!! Wählen Sie bitte ihre Paarenanzahl aus !!";
                 }
             },
             IfPair: function (number) {
@@ -616,7 +624,7 @@
     @import "../SASS/size";
     @import "../SASS/cardColors";
 
-    button, button:focus {
+   button, button:focus, select, select:focus {
         outline: none;
         border: none;
     }

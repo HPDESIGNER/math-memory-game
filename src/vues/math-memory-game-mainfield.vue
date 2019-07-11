@@ -1,12 +1,13 @@
 <template>
     <div class="container p-0 text-center pl-0 pr-0">
-        <div class="w-100 text-center bg-basic text-white" id="info">{{alert}}</div>
+        <button class="w-100 text-center bg-basic text-white position-absolute fixed-top" @click="offAlert" v-if="ifAlert">{{alert}}</button>
         <math-memory-game-setting @setPairNumber="setField($event)" v-if="settingVisibility"></math-memory-game-setting>
         <math-memory-game-feedback :click="click" :pairNumber="pairNumber" :pairNumberFound="pairNumberFound" v-if="feedbackVisibility"></math-memory-game-feedback>
         <math-memory-game-card :class="classNameList[index].classNameCard" :content="groupListIndex"
                                        :key="index" @ifClicked="clicked($event)"
                                        v-for="(groupListIndex, index) in classNameList"
                                        v-if="classNameList[index].ifVisible"></math-memory-game-card>
+        <button class="text-white w-100 h-100 bg-basic mt-1" @click="setFieldNeu" v-if="settingNeuVisibility">NEUES SPIEL</button>
     </div>
 </template>
 
@@ -26,6 +27,8 @@
                 settingVisibility: true,
                 alert: "",
                 feedbackVisibility: false,
+                ifAlert: false,
+                settingNeuVisibility: false,
                 classNameList: [
                     {
                         id: 1,
@@ -580,8 +583,14 @@
                     this.settingVisibility = false;
                 }
                 else {
+                    this.ifAlert = true;
                     this.alert = "!! Wählen Sie bitte ihre Paarenanzahl aus !!";
                 }
+            },
+            setFieldNeu: function () {
+                this.settingVisibility = true;
+                this.settingNeuVisibility = false;
+                this.setReset();
             },
             IfPair: function (number) {
                 for (let i = 0; i < 64; i++) {
@@ -611,9 +620,12 @@
                 if (this.click % 2 === 0) {
                     this.IfPair(card[0]);
                     if (this.ifAll(this.pairNumber * 2)) {
-                        setTimeout(this.setReset, 600);
+                       this.settingNeuVisibility = true;
                     }
                 }
+            },
+            offAlert: function () {
+                this.ifAlert = false;
             }
         }
     }

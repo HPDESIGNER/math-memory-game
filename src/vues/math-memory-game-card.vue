@@ -1,5 +1,5 @@
 <template>
-    <button class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0" :class="content.classNameCard" @click="rotate()"><span><span v-if="!content.ifOpen">math memory game</span>&nbsp;</span></button>
+    <button class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0" :class="content.classNameCard" @click="rotate()"></button>
 </template>
 
 <script>
@@ -14,11 +14,9 @@
             rotate: function () {
                 if(this.content.classNameCard === "bg-basic"){
                     this.$emit('ifClicked', [this.content.id-1]);
-                    this.ifBack = false;
                 }
                 else {
                     window.alert("Die Karte ist schon geöffnet");
-                    this.ifBack = true;
                 }
             }
         }

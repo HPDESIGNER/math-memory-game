@@ -23,7 +23,8 @@
     "npm": "^6.9.0",
     "popper.js": "^1.14.7",
     "sass-loader": "^7.1.0",
-    "vue": "^2.6.7"
+    "vue": "^2.6.7",
+    "lodash.defaultsdeep": ">=4.6.1"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.0.1",

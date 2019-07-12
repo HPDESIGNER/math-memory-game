@@ -1,7 +1,7 @@
 <template>
     <div class="row mb-1">
            <div class="col-12">
-              <div class="ml-auto feedback text-center text-white bg-basic">{{pairNumberFound}} aus {{pairNumber}}</div>
+              <div class="ml-auto feedback text-center text-white bg-basic mb-1">{{pairNumberFound}} aus {{pairNumber}}</div>
            </div>
     </div>
 </template>
@@ -29,7 +29,7 @@
      min-width: 70px;
      box-shadow: 0px 0px 2px 1px blue;
      border-radius: 6px;
-     margin-top: -5px;
+     margin-top: -2px;
      font-size: large;
  }
 </style>

@@ -1,13 +1,13 @@
 <template>
     <div class="container p-0 text-center pl-0 pr-0">
-        <button class="w-100 text-center bg-basic text-white position-absolute fixed-top" @click="offAlert" v-if="ifAlert">{{alert}}</button>
+        <button class="w-100 text-center bg-basic text-white position-absolute fixed-top mb-1" @click="offAlert" v-if="ifAlert">{{alert}}</button>
         <math-memory-game-setting @setPairNumber="setField($event)" v-if="settingVisibility"></math-memory-game-setting>
         <math-memory-game-feedback :click="click" :pairNumber="pairNumber" :pairNumberFound="pairNumberFound" v-if="feedbackVisibility"></math-memory-game-feedback>
         <math-memory-game-card :class="classNameList[index].classNameCard" :content="groupListIndex"
                                        :key="index" @ifClicked="clicked($event)"
                                        v-for="(groupListIndex, index) in classNameList"
                                        v-if="classNameList[index].ifVisible"></math-memory-game-card>
-        <button class="text-white w-100 h-100 bg-basic mt-1" @click="setFieldNeu" v-if="settingNeuVisibility">NEUES SPIEL</button>
+        <button class="text-white w-100 h-100 bg-basic" @click="setFieldNeu" v-if="settingNeuVisibility">NEUES SPIEL</button>
     </div>
 </template>
 

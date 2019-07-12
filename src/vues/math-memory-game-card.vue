@@ -12,7 +12,7 @@
         },
         methods: {
             rotate: function () {
-                if(this.content.classNameCard === "bg-basic"){
+                if(this.content.classNameCard === "bg-back"){
                     this.$emit('ifClicked', [this.content.id-1]);
                 }
                 else {
@@ -24,7 +24,7 @@
 </script>
 
 <style lang="scss" scoped>
-    button[class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0 bg-basic bg-basic"]:hover{
+    button[class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0 bg-back bg-back"]:hover{
             $shadow: 0 0 35px 10px darkblue inset;
             box-shadow: $shadow;
             -moz-box-shadow: $shadow;

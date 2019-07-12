@@ -1,13 +1,13 @@
 <template>
     <div class="container p-0 text-center pl-0 pr-0">
-        <button class="w-100 text-center bg-basic text-white position-absolute fixed-top" @click="offAlert" v-if="ifAlert">{{alert}}</button>
+        <button class="w-100 text-center bg-back text-white position-absolute fixed-top" @click="offAlert" v-if="ifAlert">{{alert}}</button>
         <math-memory-game-setting @setPairNumber="setField($event)" v-if="settingVisibility"></math-memory-game-setting>
         <math-memory-game-feedback :click="click" :pairNumber="pairNumber" :pairNumberFound="pairNumberFound" v-if="feedbackVisibility"></math-memory-game-feedback>
         <math-memory-game-card :class="classNameList[index].classNameCard" :content="groupListIndex"
                                        :key="index" @ifClicked="clicked($event)"
                                        v-for="(groupListIndex, index) in classNameList"
                                        v-if="classNameList[index].ifVisible"></math-memory-game-card>
-        <button class="text-white w-100 h-100 bg-basic mt-1" @click="setFieldNeu" v-if="settingNeuVisibility">NEUES SPIEL</button>
+        <button class="text-white w-100 h-100 bg-back mt-1" @click="setFieldNeu" v-if="settingNeuVisibility">NEUES SPIEL</button>
     </div>
 </template>
 
@@ -32,7 +32,7 @@
                 classNameList: [
                     {
                         id: 1,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-1",
                         ifPair: false,
                         ifVisible: false,
@@ -40,7 +40,7 @@
                     },
                     {
                         id: 2,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-1",
                         ifPair: false,
                         ifVisible: false,
@@ -48,7 +48,7 @@
                     },
                     {
                         id: 3,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-2",
                         ifPair: false,
                         ifVisible: false,
@@ -56,7 +56,7 @@
                     },
                     {
                         id: 4,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-2",
                         ifPair: false,
                         ifVisible: false,
@@ -64,7 +64,7 @@
                     },
                     {
                         id: 5,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-3",
                         ifPair: false,
                         ifVisible: false,
@@ -72,7 +72,7 @@
                     },
                     {
                         id: 6,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-3",
                         ifPair: false,
                         ifVisible: false,
@@ -80,7 +80,7 @@
                     },
                     {
                         id: 7,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-4",
                         ifPair: false,
                         ifVisible: false,
@@ -88,7 +88,7 @@
                     },
                     {
                         id: 8,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-4",
                         ifPair: false,
                         ifVisible: false,
@@ -96,7 +96,7 @@
                     },
                     {
                         id: 9,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-5",
                         ifPair: false,
                         ifVisible: false,
@@ -104,7 +104,7 @@
                     },
                     {
                         id: 10,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-5",
                         ifPair: false,
                         ifVisible: false,
@@ -112,7 +112,7 @@
                     },
                     {
                         id: 11,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-6",
                         ifPair: false,
                         ifVisible: false,
@@ -120,7 +120,7 @@
                     },
                     {
                         id: 12,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-6",
                         ifPair: false,
                         ifVisible: false,
@@ -128,7 +128,7 @@
                     },
                     {
                         id: 13,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-7",
                         ifPair: false,
                         ifVisible: false,
@@ -136,7 +136,7 @@
                     },
                     {
                         id: 14,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-7",
                         ifPair: false,
                         ifVisible: false,
@@ -144,7 +144,7 @@
                     },
                     {
                         id: 15,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-8",
                         ifPair: false,
                         ifVisible: false,
@@ -152,7 +152,7 @@
                     },
                     {
                         id: 16,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-8",
                         ifPair: false,
                         ifVisible: false,
@@ -160,7 +160,7 @@
                     },
                     {
                         id: 17,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-9",
                         ifPair: false,
                         ifVisible: false,
@@ -168,7 +168,7 @@
                     },
                     {
                         id: 18,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-9",
                         ifPair: false,
                         ifVisible: false,
@@ -176,7 +176,7 @@
                     },
                     {
                         id: 19,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-10",
                         ifPair: false,
                         ifVisible: false,
@@ -184,7 +184,7 @@
                     },
                     {
                         id: 20,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-10",
                         ifPair: false,
                         ifVisible: false,
@@ -192,7 +192,7 @@
                     },
                     {
                         id: 21,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-11",
                         ifPair: false,
                         ifVisible: false,
@@ -200,7 +200,7 @@
                     },
                     {
                         id: 22,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-11",
                         ifPair: false,
                         ifVisible: false,
@@ -208,7 +208,7 @@
                     },
                     {
                         id: 23,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-12",
                         ifPair: false,
                         ifVisible: false,
@@ -216,7 +216,7 @@
                     },
                     {
                         id: 24,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-12",
                         ifPair: false,
                         ifVisible: false,
@@ -224,7 +224,7 @@
                     },
                     {
                         id: 25,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-13",
                         ifPair: false,
                         ifVisible: false,
@@ -232,7 +232,7 @@
                     },
                     {
                         id: 26,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-13",
                         ifPair: false,
                         ifVisible: false,
@@ -240,7 +240,7 @@
                     },
                     {
                         id: 27,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-14",
                         ifPair: false,
                         ifVisible: false,
@@ -248,7 +248,7 @@
                     },
                     {
                         id: 28,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-14",
                         ifPair: false,
                         ifVisible: false,
@@ -256,7 +256,7 @@
                     },
                     {
                         id: 29,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-15",
                         ifPair: false,
                         ifVisible: false,
@@ -264,7 +264,7 @@
                     },
                     {
                         id: 30,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-15",
                         ifPair: false,
                         ifVisible: false,
@@ -272,7 +272,7 @@
                     },
                     {
                         id: 31,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-16",
                         ifPair: false,
                         ifVisible: false,
@@ -280,7 +280,7 @@
                     },
                     {
                         id: 32,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-16",
                         ifPair: false,
                         ifVisible: false,
@@ -288,7 +288,7 @@
                     },
                     {
                         id: 33,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-17",
                         ifPair: false,
                         ifVisible: false,
@@ -296,7 +296,7 @@
                     },
                     {
                         id: 34,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-17",
                         ifPair: false,
                         ifVisible: false,
@@ -304,7 +304,7 @@
                     },
                     {
                         id: 35,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-18",
                         ifPair: false,
                         ifVisible: false,
@@ -312,7 +312,7 @@
                     },
                     {
                         id: 36,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-18",
                         ifPair: false,
                         ifVisible: false,
@@ -320,7 +320,7 @@
                     },
                     {
                         id: 37,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-19",
                         ifPair: false,
                         ifVisible: false,
@@ -328,7 +328,7 @@
                     },
                     {
                         id: 38,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-19",
                         ifPair: false,
                         ifVisible: false,
@@ -336,7 +336,7 @@
                     },
                     {
                         id: 39,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-20",
                         ifPair: false,
                         ifVisible: false,
@@ -344,7 +344,7 @@
                     },
                     {
                         id: 40,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-20",
                         ifPair: false,
                         ifVisible: false,
@@ -352,7 +352,7 @@
                     },
                     {
                         id: 41,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-21",
                         ifPair: false,
                         ifVisible: false,
@@ -360,7 +360,7 @@
                     },
                     {
                         id: 42,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-21",
                         ifPair: false,
                         ifVisible: false,
@@ -368,7 +368,7 @@
                     },
                     {
                         id: 43,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-22",
                         ifPair: false,
                         ifVisible: false,
@@ -376,7 +376,7 @@
                     },
                     {
                         id: 44,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-22",
                         ifPair: false,
                         ifVisible: false,
@@ -384,7 +384,7 @@
                     },
                     {
                         id: 45,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-23",
                         ifPair: false,
                         ifVisible: false,
@@ -392,7 +392,7 @@
                     },
                     {
                         id: 46,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-23",
                         ifPair: false,
                         ifVisible: false,
@@ -400,7 +400,7 @@
                     },
                     {
                         id: 47,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-24",
                         ifPair: false,
                         ifVisible: false,
@@ -408,7 +408,7 @@
                     },
                     {
                         id: 48,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-24",
                         ifPair: false,
                         ifVisible: false,
@@ -416,7 +416,7 @@
                     },
                     {
                         id: 49,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-25",
                         ifPair: false,
                         ifVisible: false,
@@ -424,7 +424,7 @@
                     },
                     {
                         id: 50,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-25",
                         ifPair: false,
                         ifVisible: false,
@@ -432,7 +432,7 @@
                     },
                     {
                         id: 51,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-26",
                         ifPair: false,
                         ifVisible: false,
@@ -440,7 +440,7 @@
                     },
                     {
                         id: 52,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-26",
                         ifPair: false,
                         ifVisible: false,
@@ -448,7 +448,7 @@
                     },
                     {
                         id: 53,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-27",
                         ifPair: false,
                         ifVisible: false,
@@ -456,7 +456,7 @@
                     },
                     {
                         id: 54,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-27",
                         ifPair: false,
                         ifVisible: false,
@@ -464,7 +464,7 @@
                     },
                     {
                         id: 55,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-28",
                         ifPair: false,
                         ifVisible: false,
@@ -472,7 +472,7 @@
                     },
                     {
                         id: 56,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-28",
                         ifPair: false,
                         ifVisible: false,
@@ -480,7 +480,7 @@
                     },
                     {
                         id: 57,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-29",
                         ifPair: false,
                         ifVisible: false,
@@ -488,7 +488,7 @@
                     },
                     {
                         id: 58,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-29",
                         ifPair: false,
                         ifVisible: false,
@@ -496,7 +496,7 @@
                     },
                     {
                         id: 59,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-30",
                         ifPair: false,
                         ifVisible: false,
@@ -504,7 +504,7 @@
                     },
                     {
                         id: 60,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-30",
                         ifPair: false,
                         ifVisible: false,
@@ -512,7 +512,7 @@
                     },
                     {
                         id: 61,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-31",
                         ifPair: false,
                         ifVisible: false,
@@ -520,7 +520,7 @@
                     },
                     {
                         id: 62,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-31",
                         ifPair: false,
                         ifVisible: false,
@@ -528,7 +528,7 @@
                     },
                     {
                         id: 63,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-32",
                         ifPair: false,
                         ifVisible: false,
@@ -536,7 +536,7 @@
                     },
                     {
                         id: 64,
-                        classNameCard: "bg-basic",
+                        classNameCard: "bg-back",
                         newColor: "bg-gradient-32",
                         ifPair: false,
                         ifVisible: false,
@@ -554,7 +554,7 @@
                 this.settingVisibility = true;
                 this.feedbackVisibility = false;
                 for (let i = 0; i < 64; i++) {
-                    this.classNameList[i].classNameCard = "bg-basic";
+                    this.classNameList[i].classNameCard = "bg-back";
                     this.classNameList[i].ifVisible = false;
                     this.classNameList[i].ifOpen = false;
                 }
@@ -594,7 +594,7 @@
             },
             IfPair: function (number) {
                 for (let i = 0; i < 64; i++) {
-                    if (this.classNameList[number].classNameCard === this.classNameList[i].classNameCard && this.classNameList[number].classNameCard !== "bg-basic" && this.classNameList[number].id !== this.classNameList[i].id) {
+                    if (this.classNameList[number].classNameCard === this.classNameList[i].classNameCard && this.classNameList[number].classNameCard !== "bg-back" && this.classNameList[number].id !== this.classNameList[i].id) {
                         this.classNameList[number].ifPair = true;
                         this.classNameList[i].ifPair = true;
                         this.pairNumberFound++;
@@ -606,13 +606,13 @@
             cardsOff: function () {
                 for (let i = 0; i < 64; i++) {
                     if (this.classNameList[i].ifPair !== true) {
-                        this.classNameList[i].classNameCard = "bg-basic";
+                        this.classNameList[i].classNameCard = "bg-back";
                         this.classNameList[i].ifOpen = false;
                     }
                 }
             },
             clicked: function (card) {
-                if (this.classNameList[card[0]].classNameCard === "bg-basic") {
+                if (this.classNameList[card[0]].classNameCard === "bg-back") {
                     this.click++;
                     this.classNameList[card[0]].ifOpen = true;
                 }

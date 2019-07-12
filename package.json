@@ -6,8 +6,8 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "homepage": "https://hpdesigner.github.io/math-memory-game/",
-    "url": "https://gitlab.com/hpdesigner/vuejs-only.git"
+    "homepage": "https://hpdesigner.github.io/math-memory-game",
+    "url": "https://github.com/HPDESIGNER/math-memory-game"
   },
   "scripts": {
     "serve": "vue-cli-service serve",

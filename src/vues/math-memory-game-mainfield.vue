@@ -7,7 +7,7 @@
                                        :key="index" @ifClicked="clicked($event)"
                                        v-for="(groupListIndex, index) in classNameList"
                                        v-if="classNameList[index].ifVisible"></math-memory-game-card>
-        <button class="text-white w-100 h-100 bg-back mt-1" @click="setFieldNeu" v-if="settingNeuVisibility">NEUES SPIEL</button>
+        <button class="text-white w-100 h-100 bg-basic mt-1" @click="setFieldNeu" v-if="settingNeuVisibility">NEUES SPIEL</button>
     </div>
 </template>
 

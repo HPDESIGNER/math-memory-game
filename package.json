@@ -6,6 +6,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
+    "homepage":"https://hpdesigner.github.io/math-memory-game/",
     "url": "https://gitlab.com/hpdesigner/vuejs-only.git"
   },
   "scripts": {

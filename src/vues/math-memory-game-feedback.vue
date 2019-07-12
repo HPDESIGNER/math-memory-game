@@ -1,7 +1,7 @@
 <template>
     <div class="row mb-1">
            <div class="col-12">
-              <div class="ml-auto feedback text-center text-white bg-basic pt-1 text-lowercase">{{pairNumberFound}} aus {{pairNumber}}</div>
+              <div class="ml-auto feedback text-center text-white bg-basic">{{pairNumberFound}} aus {{pairNumber}}</div>
            </div>
     </div>
 </template>

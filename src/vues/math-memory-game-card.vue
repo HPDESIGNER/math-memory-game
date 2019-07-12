@@ -30,7 +30,4 @@
             -moz-box-shadow: $shadow;
             -webkit-box-shadow:$shadow;
     }
-    span {
-        transform: rotate(315deg);
-    }
 </style>

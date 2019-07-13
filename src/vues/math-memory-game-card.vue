@@ -24,8 +24,10 @@
 </script>
 
 <style lang="scss" scoped>
-    button[class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0 bg-back bg-back"] {
+    button {
         margin-top: -5px;
+    }
+    button[class="d-inline-flex border text-center text-white card-size ml-auto mr-auto p-0 bg-back bg-back"] {
         border-bottom-style: dashed;
         &:hover{
             $shadow: 0 0 35px 10px darkblue inset;

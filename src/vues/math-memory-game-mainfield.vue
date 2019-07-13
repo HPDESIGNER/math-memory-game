@@ -29,6 +29,7 @@
                 feedbackVisibility: false,
                 ifAlert: false,
                 settingNeuVisibility: false,
+                temp: 0,
                 classNameList: [
                     {
                         id: 1,
@@ -546,6 +547,15 @@
             }
         },
         methods: {
+            setMix: function(number) {
+                let l = number*2, n;
+                while (--l > 0) {
+                    n = Math.floor(Math.random() * (l + 1));
+                    this.temp = this.classNameList[n].newColor;
+                    this.classNameList[n].newColor = this.classNameList[l].newColor;
+                    this.classNameList[l].newColor = this.temp;
+                }
+            },
             setReset: function () {
                 this.click = 0;
                 this.pairNumber = 0;
@@ -581,6 +591,7 @@
                     this.pairNumber = number[0];
                     this.feedbackVisibility = true;
                     this.settingVisibility = false;
+                    this.setMix(number[0]);
                 }
                 else {
                     this.ifAlert = true;

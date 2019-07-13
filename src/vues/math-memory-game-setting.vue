@@ -2,7 +2,7 @@
     <div class="row w-100 p-0 m-0">
         <div class="col-12 text-right p-0 m-0 mb-1">
             <div class="ml-auto pair-number text-right text-white bg-basic pt-1 pr-1">
-                <select v-model="pairNumber" class="h-100 text-white bg-basic float-left p-0 mt-1">
+                <select v-model="pairNumber" class="h-100 text-white bg-basic float-left p-0">
                     <option value="0" selected>0</option>
                     <option value="8">8</option>
                     <option value="12">12</option>
@@ -53,6 +53,7 @@
     }
 
     select {
+
         border-radius: 0 6px 0 6px;
         width: 60px;
 

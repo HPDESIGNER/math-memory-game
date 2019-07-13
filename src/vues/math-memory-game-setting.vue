@@ -36,6 +36,7 @@
 </script>
 
 <style lang="scss" scoped>
+    @import "../SASS/minWidth";
     button:hover, select:hover {
         $shadow: 0 0 30px 5px darkblue inset;
         box-shadow: $shadow;
@@ -45,7 +46,7 @@
 
     .pair-number {
         width: 15%;
-        min-width: 115px;
+        min-width: $min-width;
         box-shadow: 0 0 2px 1px blue;
         border-radius: 6px;
         margin-top: -5px;

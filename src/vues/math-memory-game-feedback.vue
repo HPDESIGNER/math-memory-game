@@ -23,10 +23,11 @@
     }
 </script>
 
-<style scoped>
+<style lang ="scss" scoped>
+    @import "../SASS/minWidth";
  .feedback {
      width: 15%;
-     min-width: 115px;
+     min-width: $min-width;
      box-shadow: 0px 0px 2px 1px blue;
      border-radius: 6px;
      margin-top: -2px;

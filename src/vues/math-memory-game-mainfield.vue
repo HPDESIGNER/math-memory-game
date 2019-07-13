@@ -1,6 +1,6 @@
 <template>
     <div class="container p-0 text-center pl-0 pr-0">
-        <button class="w-100 text-center bg-basic text-white position-absolute fixed-top" @click="offAlert" v-if="ifAlert">{{alert}}</button>
+        <button class="text-center bg-basic text-white position-absolute fixed-top m-0 p-0" @click="offAlert" v-if="ifAlert">{{alert}}</button>
         <math-memory-game-setting @setPairNumber="setField($event)" v-if="settingVisibility"></math-memory-game-setting>
         <math-memory-game-feedback :click="click" :pairNumber="pairNumber" :pairNumberFound="pairNumberFound" v-if="feedbackVisibility"></math-memory-game-feedback>
         <math-memory-game-card :class="classNameList[index].classNameCard" :content="groupListIndex"
@@ -650,7 +650,7 @@
    button, button:focus, select, select:focus {
         outline: none;
         border: none;
-       .w-100 {
+       button[class="text-center bg-basic text-white position-absolute fixed-top m-0 p-0"] {
            min-width: 100%;
        }
     }

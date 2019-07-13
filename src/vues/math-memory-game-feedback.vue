@@ -28,7 +28,7 @@
  .feedback {
      width: 15%;
      min-width: $min-width;
-     box-shadow: 0px 0px 2px 1px blue;
+     box-shadow: 0 0 2px 1px blue;
      border-radius: 6px;
      margin-top: -2px;
      font-size: large;

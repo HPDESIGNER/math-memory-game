@@ -26,7 +26,7 @@
 <style scoped>
  .feedback {
      width: 15%;
-     min-width: 135px;
+     min-width: 110px;
      box-shadow: 0px 0px 2px 1px blue;
      border-radius: 6px;
      margin-top: -2px;

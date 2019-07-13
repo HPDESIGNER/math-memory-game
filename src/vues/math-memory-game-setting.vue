@@ -45,18 +45,16 @@
 
     .pair-number {
         width: 15%;
-        min-width: 110px;
-        box-shadow: 0px 0px 2px 1px blue;
+        min-width: 115px;
+        box-shadow: 0 0 2px 1px blue;
         border-radius: 6px;
         margin-top: -5px;
         font-size: large;
     }
 
     select {
-
         border-radius: 0 6px 0 6px;
-        width: 60px;
-
+        width: 55px;
         option {
             background: #bbb;
             border-top: 1px solid #fff;
